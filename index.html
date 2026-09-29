@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f7ecd9">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 <title>Alfabeto de Encontros</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
@@ -24,8 +27,8 @@ body{
   display:flex;flex-direction:column;
 }
 header{position:relative;text-align:center;padding:calc(18px + env(safe-area-inset-top)) 16px 6px}
-header h1{font-family:var(--hand);font-size:2.3rem;margin:0;line-height:1;transform:rotate(-1.5deg)}
-header p{margin:4px 0 0;color:var(--soft);font-size:.9rem}
+header h1{font-family:var(--hand);font-size:2.1rem;margin:0;line-height:1;transform:rotate(-1.5deg)}
+header p{margin:8px 0 0;color:var(--soft);font-size:.8rem}
 main{flex:1;overflow-y:auto;padding:10px 16px 20px}
 .view{display:none}.view.on{display:block}
 
@@ -72,7 +75,7 @@ label{display:block;font-weight:800;font-size:.85rem;margin:10px 0 3px}
 input,textarea{width:100%;font:1rem var(--body);color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:12px;padding:10px}
 textarea{min-height:80px;resize:vertical}
 .hint{color:var(--soft);font-size:.85rem;margin:0}
-.gear{position:absolute;right:12px;top:calc(14px + env(safe-area-inset-top));width:42px;height:42px;padding:0;display:flex;align-items:center;justify-content:center;background:var(--card);border:2px solid var(--ink);border-radius:50%;box-shadow:2px 2px 0 var(--ink);color:var(--ink)}
+.gear{position:absolute;right:12px;top:calc(14px + env(safe-area-inset-top));width:30px;height:30px;padding:0;display:flex;align-items:center;justify-content:center;background:var(--card);border:2px solid var(--ink);border-radius:50%;box-shadow:2px 2px 0 var(--ink);color:var(--ink)}
 .gear:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--ink)}
 .gear svg{width:22px;height:22px}
 .panel{background:var(--card);border:2px solid var(--ink);border-radius:18px;padding:14px 18px;margin:0 auto 16px;max-width:400px}
@@ -86,7 +89,7 @@ textarea{min-height:80px;resize:vertical}
 <body>
 <header>
   <h1>Alfabeto de Encontros</h1>
-  <p>Do A ao Z, um encontro de cada vez</p>
+  <p>Sorteamos uma letra de cada vez até completarmos o alfabeto</p>
   <button class="gear" id="gearBtn" aria-label="Definições">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
   </button>
